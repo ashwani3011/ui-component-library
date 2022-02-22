@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Error flash message</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 62.5%;
+      }
+      body {
+        background-color: rgb(61, 212, 212);
+        overflow: hidden;
+        font-family: "Roboto", sans-serif;
+      }
+      .card {
+        margin: 6rem auto;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 32rem;
+        height: 50rem;
+        background-color: #fff;
+        align-items: center;
+        box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+        border-radius: 11px;
+        overflow: hidden;
+      }
+      .card-image {
+        margin: 6.4rem;
+        height: 65%;
+      }
+      .card-image img {
+        height: 19rem;
+        margin-top: 2.6rem;
+      }
+      .card-content {
+        width: 100%;
+        height: 35%;
+        background-color: rgb(248, 217, 176);
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        position: relative;
+        font-size: 1.6rem;
+        align-items: center;
+      }
+      .btn {
+        position: absolute;
+        padding: 0.8rem 3.6rem;
+        margin-top: -1.7rem;
+        background-color: #fff;
+        border: none;
+        border-radius: 150rem;
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: #ff404c;
+        box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+      }
+      .text {
+        margin-top: 4.8rem;
+        text-align: center;
+        font-weight: 500;
+        color: #555;
+        line-height: 1.4;
+        letter-spacing: 0.75px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="card-image">
+        <img src="error.png" />
+      </div>
+      <div class="card-content">
+        <button class="btn">Error</button>
+        <p class="text">
+          Something went wrong.<br />
+          Let's try again.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
