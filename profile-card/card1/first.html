@@ -58,11 +58,13 @@
         height: 9rem;
         width: 9rem;
         padding: 2px;
+
         border: 3px solid white;
         border-radius: 100%;
         margin: 0 1.5rem 0 1.5rem;
         transform: rotateX("90");
-        box-shadow: 0 2.4rem 2.8rem rgba(0, 0, 0, 0.192);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+          rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
       }
       .image-box {
         display: flex;
@@ -75,9 +77,9 @@
         transform: translate(-50%, 0%);
       }
       .image-box .icon {
-        width: 4rem;
-        height: 4rem;
-        padding: 0.5rem;
+        width: 3rem;
+        height: 3rem;
+        padding: 0.8rem;
         background-color: #fd4c58;
         border-radius: 50%;
       }
@@ -86,9 +88,12 @@
         height: 3rem;
         color: white;
       }
+      .icon:hover {
+        cursor: pointer;
+      }
       .count-box {
         display: flex;
-        margin-top: 6rem;
+        margin-top: 4.5rem;
         margin-bottom: 2rem;
         gap: 2rem;
         justify-content: space-around;
@@ -157,8 +162,9 @@
         padding: 1.4rem 3rem;
         border-radius: 9px;
         margin-top: 3rem;
-        margin-left: 30%;
-        transform: translate(-21%, 0);
+        position: absolute;
+        margin-left: 6rem;
+        /* transform: translate(-50%, 0); */
       }
 
       .btn--full:link,
@@ -182,7 +188,7 @@
           <ion-icon class="icon" name="settings-outline"></ion-icon>
         </div>
         <div class="name-box">
-          <p class="name">Steve Aleksander</p>
+          <p class="name">Steva Aleksander</p>
           <p class="role">Front End Developer | UI/UX Designer</p>
           <div class="location-box">
             <ion-icon class="icon" name="location"></ion-icon>
@@ -190,17 +196,11 @@
           </div>
         </div>
         <div class="image-box">
-          <img
-            class="icon"
-            src="https://img.icons8.com/ios-glyphs/30/000000/github.png"
-          />
+          <ion-icon class="icon" name="logo-github"></ion-icon>
           <div class="profile-pic-box">
             <img class="profile-pic" src="./profile-pic.jpg" alt="" />
           </div>
-          <img
-            class="icon"
-            src="https://img.icons8.com/ios-glyphs/30/000000/linkedin.png"
-          />
+          <ion-icon class="icon" name="logo-linkedin"></ion-icon>
         </div>
       </div>
       <div class="bottom-box">
@@ -223,10 +223,11 @@
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex,
             perspiciatis incidunt. Dignissimos tenetur velits adipisicing elit.
+            Dignissimos tenetur velits adipisicing elit.
           </p>
         </div>
         <div class="follow">
-          <a href="#" class="btn btn--full">Get Started</a>
+          <a href="#" class="btn btn--full">Follow</a>
         </div>
       </div>
     </div>

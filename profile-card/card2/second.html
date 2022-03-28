@@ -4,14 +4,242 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
     <title>Profile-card-2</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 62.5%;
+      }
+      body {
+        font-family: "Rubik", sans-serif;
+        line-height: 1;
+        font-weight: 400;
+        color: #555;
+        font-size: 1.3rem;
+      }
+      .main-container {
+        height: 50rem;
+        width: 27rem;
+        /* background-color: aquamarine; */
+        margin: auto;
+        margin-top: 3rem;
+        box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.192);
+      }
+      .top-box {
+        height: 60%;
+        background-image: linear-gradient(to right, #e619269f, #f05f0ca8),
+          url("./bg-image.jpg");
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        /* padding: 2rem; */
+      }
+      .bottom-box {
+        height: 40%;
+        padding: 0 2rem 0 2rem;
+      }
+      .profile-pic {
+        height: 9rem;
+        width: 9rem;
+        padding: 2px;
+        border: 3px solid white;
+        border-radius: 100%;
+        /* margin: 0 1.5rem 0 1.5rem; */
+        box-shadow: 0 2.4rem 2.8rem rgba(0, 0, 0, 0.192);
+      }
+      .image-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: absolute;
+        top: 12.6rem;
+        left: 50%;
+        transform: translate(-50%, 0%);
+      }
+      .logo-box {
+        margin-top: 11rem;
+        display: flex;
+        gap: 2rem;
+        margin-left: 50%;
+        transform: translate(-37%, 0);
+        /* justify-content: space-around; */
+      }
+      .logo-box .icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        padding: 0.8rem;
+        background-color: #fd4c58;
+        border-radius: 50%;
+      }
+      .icon {
+        width: 3rem;
+        height: 3rem;
+        color: white;
+      }
+      .icon:hover {
+        cursor: pointer;
+      }
+      .count-box {
+        display: flex;
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+        gap: 2rem;
+        justify-content: space-around;
+      }
+      .numbers-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        justify-content: center;
+      }
+      .numbers-box p {
+        color: #fd4c58;
+        font-size: 1.7rem;
+        font-weight: 600;
+      }
+      .about-box p {
+        font-size: 1.4rem;
+        text-align: justify;
+      }
+      .about-box {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .icon-box {
+        padding: 1rem 1rem 0 1rem;
+        display: flex;
+        justify-content: space-between;
+      }
+      .icon-box .icon {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+      .name-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        margin-top: 1rem;
+        gap: 0.3rem;
+      }
+      .name {
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 2rem;
+        letter-spacing: 0.1rem;
+      }
+      .location-box {
+        display: flex;
+        align-items: center;
+        margin-top: 0.8rem;
+      }
+      .location-box .icon {
+        width: 2rem;
+        height: 2rem;
+      }
+      .btn,
+      .btn:link,
+      .btn:visited {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 1.7rem;
+        font-weight: 500;
+        padding: 1.4rem 3rem;
+        border-radius: 9px;
+        /* margin-top: 3rem; */
+        margin-left: 50%;
+        transform: translate(-50%, 0);
+        margin-top: 1rem;
+      }
+
+      .btn--full:link,
+      .btn--full:visited {
+        /* background-image: linear-gradient(to right, #e61927, #f0600c); */
+        color: #fd4c58;
+        background-color: white;
+        box-shadow: rgb(250, 115, 115) 0px 5px 15px;
+      }
+
+      .btn--full:hover,
+      .btn--full:active {
+        box-shadow: rgb(252, 101, 101) 0px 5px 15px;
+      }
+    </style>
   </head>
-  <style></style>
+
   <body>
     <div class="main-container">
-      <div class="image-container"></div>
-      <div class="profile-pic-container"></div>
-      <div class="detail-container"></div>
+      <div class="top-box">
+        <div class="icon-box">
+          <ion-icon class="icon" name="arrow-back-outline"></ion-icon>
+          <ion-icon class="icon" name="settings-outline"></ion-icon>
+        </div>
+        <div class="image-box">
+          <div class="profile-pic-box">
+            <img class="profile-pic" src="./profile-pic.jpg" alt="" />
+          </div>
+        </div>
+        <div class="name-box">
+          <p class="name">Steva Aleksander</p>
+          <p class="role">Front End Developer | UI/UX Designer</p>
+          <div class="location-box">
+            <ion-icon class="icon" name="location"></ion-icon>
+            <span>Noida, UP</span>
+          </div>
+        </div>
+        <div class="logo-box">
+          <ion-icon class="icon" name="logo-github"></ion-icon>
+          <ion-icon class="icon" name="logo-linkedin"></ion-icon>
+        </div>
+        <div class="follow">
+          <a href="#" class="btn btn--full">Follow</a>
+        </div>
+      </div>
+      <div class="bottom-box">
+        <div class="count-box">
+          <div class="numbers-box">
+            <p>1755</p>
+            <span>Stars</span>
+          </div>
+          <div class="numbers-box">
+            <p>670</p>
+            <span>Followers</span>
+          </div>
+          <div class="numbers-box">
+            <p>243</p>
+            <span>Following</span>
+          </div>
+        </div>
+        <div class="about-box">
+          <h2>About Steve</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex,
+            perspiciatis incidunt. Dignissimos tenetur velits adipisicing elit.
+          </p>
+        </div>
+      </div>
     </div>
   </body>
 </html>
